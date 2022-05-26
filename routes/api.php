@@ -21,3 +21,6 @@ Route::get('/users/{user}', [\App\Http\Controllers\Api\UserController::class, 's
 // Cars
 Route::get('/cars', [\App\Http\Controllers\Api\CarController::class, 'index']);
 Route::get('/cars/{car}', [\App\Http\Controllers\Api\CarController::class, 'show']);
+Route::get('/cars/{car}/assigned_user', [\App\Http\Controllers\Api\CarController::class, 'getAssignedUser']);
+Route::put('/cars/{car}/assign_user', [\App\Http\Controllers\Api\CarController::class, 'assignUser']);
+Route::put('/cars/{car}/unassign', [\App\Http\Controllers\Api\CarController::class, 'unassign']);
